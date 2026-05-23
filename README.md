@@ -14,14 +14,37 @@ Superpowers is a collection of high-quality skills for AI coding agents. Origina
 
 ## Installation
 
-To install superpowers for Vibe CLI:
+There are two ways to install superpowers for Vibe CLI:
+
+### Method 1: Using the Standalone Installer (Recommended)
+
+This is the easiest method - just download and run the standalone installer:
 
 ```bash
-# Clone this repository (or use the provided installer)
-cd /Users/Romain/UltraVibe/superpowers
+# Download and run directly (requires bash)
+curl -sSL https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh | bash
+
+# Or with wget
+wget -qO- https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh | bash
+
+# To update later
+~/.vibe/update-superpowers.sh --update
+```
+
+### Method 2: Clone and Run
+
+If you want to inspect the installer code first:
+
+```bash
+# Clone this repository
+git clone https://github.com/RomainRev/UltraVibe/superpowers.git
+cd superpowers
 
 # Run the installer
 ./install.sh
+
+# Or use the standalone version
+./install-standalone.sh
 ```
 
 The installer will:
@@ -81,10 +104,33 @@ After installation, your `~/.vibe` directory will look like:
 
 ### Using a Specific Version
 
-To use a specific version of superpowers, modify the `SUPERPOWERS_REPO` variable in `install.sh`:
+To use a specific version of superpowers, you can either:
 
+**For install.sh:** Modify the `SUPERPOWERS_REPO` variable in the script:
 ```bash
 SUPERPOWERS_REPO="https://github.com/obra/superpowers.git#v5.0.3"
+```
+
+**For the standalone installer:** Use environment variables:
+```bash
+SUPERPOWERS_REPO="https://github.com/obra/superpowers.git#v5.0.3" ./install-standalone.sh
+```
+
+### Environment Variables (Standalone Installer Only)
+
+The standalone installer supports these environment variables:
+
+- `SUPERPOWERS_REPO`: Git repository URL (default: `https://github.com/obra/superpowers.git`)
+- `SUPERPOWERS_DIR`: Installation directory (default: `~/.vibe/superpowers`)
+- `INSTALLER_URL`: URL to check for installer updates (default: GitHub URL of this script)
+
+Example:
+```bash
+# Install to a custom location
+SUPERPOWERS_DIR="${HOME}/my-custom-superpowers" ./install-standalone.sh
+
+# Use a specific branch or tag
+SUPERPOWERS_REPO="https://github.com/obra/superpowers.git#v5.0.3" ./install-standalone.sh
 ```
 
 Then run the installer again.
