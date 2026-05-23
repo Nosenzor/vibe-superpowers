@@ -2,14 +2,14 @@
 
 # Standalone Portable Superpowers Installer for Vibe CLI
 # This is a single-file installer that can be downloaded and run directly
-# Usage: curl -sSL https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/Nosenzor/vibe-superpowers/main/install-standalone.sh | bash
 
 set -euo pipefail
 
 # Configuration - These can be overridden by environment variables
 SUPERPOWERS_REPO="${SUPERPOWERS_REPO:-https://github.com/obra/superpowers.git}"
 SUPERPOWERS_DIR="${SUPERPOWERS_DIR:-${HOME}/.vibe/superpowers}"
-INSTALLER_URL="${INSTALLER_URL:-https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh}"
+INSTALLER_URL="${INSTALLER_URL:-https://raw.githubusercontent.com/Nosenzor/vibe-superpowers/main/install-standalone.sh}"
 
 # Colors for output
 RED='\033[0;31m'

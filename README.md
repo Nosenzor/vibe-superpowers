@@ -2,6 +2,8 @@
 
 This repository contains a portable installer that sets up the [obra/superpowers](https://github.com/obra/superpowers) skills for Mistral Vibe CLI.
 
+**Repository:** https://github.com/Nosenzor/vibe-superpowers
+
 ## What is Superpowers?
 
 Superpowers is a collection of high-quality skills for AI coding agents. Originally designed for OpenCode, Claude Code, and other harnesses, these skills provide:
@@ -22,10 +24,10 @@ This is the easiest method - just download and run the standalone installer:
 
 ```bash
 # Download and run directly (requires bash)
-curl -sSL https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh | bash
+curl -sSL https://raw.githubusercontent.com/Nosenzor/vibe-superpowers/main/install-standalone.sh | bash
 
 # Or with wget
-wget -qO- https://raw.githubusercontent.com/RomainRev/UltraVibe/superpowers/main/install-standalone.sh | bash
+wget -qO- https://raw.githubusercontent.com/Nosenzor/vibe-superpowers/main/install-standalone.sh | bash
 
 # To update later
 ~/.vibe/update-superpowers.sh --update
@@ -37,8 +39,8 @@ If you want to inspect the installer code first:
 
 ```bash
 # Clone this repository
-git clone https://github.com/RomainRev/UltraVibe/superpowers.git
-cd superpowers
+git clone https://github.com/Nosenzor/vibe-superpowers.git
+cd vibe-superpowers
 
 # Run the installer
 ./install.sh
@@ -62,7 +64,7 @@ To update superpowers to the latest version:
 ~/.vibe/update-superpowers.sh --update
 
 # Method 2: Run the installer again
-cd /Users/Romain/UltraVibe/superpowers
+cd ~/vibe-superpowers
 ./install.sh --update
 
 # Method 3: Pull updates manually
@@ -199,7 +201,7 @@ sudo yum install curl
 Make sure the scripts are executable:
 
 ```bash
-chmod +x /Users/Romain/UltraVibe/superpowers/install.sh
+chmod +x ~/vibe-superpowers/install.sh
 chmod +x ~/.vibe/update-superpowers.sh
 ```
 
