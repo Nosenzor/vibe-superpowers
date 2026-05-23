@@ -1,0 +1,22 @@
+# Ignore local configuration and temporary files
+.env
+*.log
+*.swp
+.DS_Store
+
+# Ignore node_modules if they exist
+node_modules/
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore macOS system files
+.__macosx
+*.un~
+
+# Ignore any local overrides
+*.local
+*.override
